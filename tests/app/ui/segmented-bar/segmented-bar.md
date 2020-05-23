@@ -5,11 +5,17 @@ environment: nativescript
 description: "Examples for using SegmentedBar"
 previous_url: /ApiReference/ui/segmented-bar/HOW-TO
 ---
+
 # SegmentedBar
+
 Using a SegmentedBar requires the "ui/segmented-bar" module.
-{%snippet article-require-segmentedbar-module%}
+
+{% snippet article-require-segmentedbar-module %}
+
 ## Creating a SegmentedBar
-{%snippet article-create-segmentedbar%}
+
+{% snippet article-create-segmentedbar %}
+
 ``` XML
 <SegmentedBar>
   <SegmentedBar.items>
@@ -19,9 +25,14 @@ Using a SegmentedBar requires the "ui/segmented-bar" module.
   </SegmentedBar.items>
 </SegmentedBar>
 ```
+
 ### Creating segmentedBar.items
+
 It is important that an items array gets created and filled with
 items first and then assigned to the segmented bar.
-{%snippet article-creating-segmentedbar-items%}
+
+{% snippet article-creating-segmentedbar-items %}
+
 ### Selecting an item programmatically
-{%snippet artcile-selecting-item%}
+
+{% snippet artcile-selecting-item %}

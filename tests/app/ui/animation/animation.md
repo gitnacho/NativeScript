@@ -5,21 +5,29 @@ environment: nativescript
 description: "Examples for using animation"
 previous_url: /ApiReference/ui/animation/HOW-TO
 ---
+
 # Animation
+
 Animating view properties requires the "ui/animation" module.
-{%snippet animation-require%}
 
-# Animating properties
-{%snippet animation-properties%}
+{% snippet animation-require %}
 
-# Cancelling animation
-{%snippet animation-cancel%}
+## Animating properties
 
-# Chaining animations
-{%snippet animation-chaining%}
+{% snippet animation-properties %}
 
-# Reusing animations
-{%snippet animation-reusing%}
+## Cancelling animation
 
-# Animating multiple views simultaneously
-{%snippet animation-multiple-views%}
+{% snippet animation-cancel %}
+
+## Chaining animations
+
+{% snippet animation-chaining %}
+
+## Reusing animations
+
+{% snippet animation-reusing %}
+
+## Animating multiple views simultaneously
+
+{% snippet animation-multiple-views %}

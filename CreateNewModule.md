@@ -1,9 +1,9 @@
 # How to create new Cross-Platform Module
 
 1. Each module resides in a separate folder.
-2. There must be a package.json file in this folder which tells the NS Runtime which is the main file of the module to load.
-3. There is a declaration (*.d.ts) file describing the public API of the module.
-4. When there is a ***.android.ts** named file this tells our CLI that this file is Android-specific and should be included in Android builds ONLY. When a build is started for the Android platform, the **.android** part of the file is stripped in the application package. For example **foo.android.js** will become ***foo.js**. Same convention works for ***.ios.ts** files.
+1. There must be a package.json file in this folder which tells the NS Runtime which is the main file of the module to load.
+1. There is a declaration (*.d.ts) file describing the public API of the module.
+1. When there is a ***.android.ts** named file this tells our CLI that this file is Android-specific and should be included in Android builds ONLY. When a build is started for the Android platform, the **.android** part of the file is stripped in the application package. For example **foo.android.js** will become ***foo.js**. Same convention works for ***.ios.ts** files.
 
 ## Declaration and implementation files
 There are several major scenarios when writing modules:
@@ -14,7 +14,7 @@ _Example:_ [matrix module](tns-core-modules/matrix)
 
 **Declaration file (foo.d.ts):**
 
-```typescript
+``` TypeScript
 export function a();
 
 export class Foo {
@@ -24,7 +24,7 @@ export class Foo {
 
 **Implementation file (foo.ts):**
 
-```typescript
+``` TypeScript
 import { Foo as FooDefinition } from ".";
 
 export function a() {
@@ -37,14 +37,14 @@ export class Foo implements FooDefinition {
 }
 ```
 
-### The module implementation depends on native APIs ONLY and the common pure JavaScript code between platform-specific implementations is minimal. 
+### The module implementation depends on native APIs ONLY and the common pure JavaScript code between platform-specific implementations is minimal.
 
 _Example:_ [timer module](tns-core-modules/timer)
 
 
 **Declaration file (foo.d.ts):**
 
-```typescript
+``` TypeScript
 export class Foo {
     public running: number;
     public start(): void;
@@ -54,7 +54,7 @@ export class Foo {
 
 **Android implementation file (foo.android.ts):**
 
-```typescript
+``` TypeScript
 import { Foo as FooDefinition } from ".";
 
 // require the definition and put implements clause to ensure API consistency between the declaration and implementation
@@ -73,7 +73,7 @@ export class Foo implements FooDefinition {
 
 **iOS implementation file (foo.ios.ts):**
 
-```typescript
+``` TypeScript
 import { Foo as FooDefinition } from ".";
 
 // require the definition and put implements clause to ensure API consistency between the declaration and implementation
@@ -102,7 +102,7 @@ _Example:_ [image module](tns-core-modules/ui/image)
 
 **Declaration file (foo.d.ts):**
 
-```typescript
+``` TypeScript
 export class Foo {
     public running: number;
     public start(): void;
@@ -112,7 +112,7 @@ export class Foo {
 
 **Common implementation file (foo-common.ts):**
 
-```typescript
+``` TypeScript
 import { FooBase as FooDefinition } from ".";
 
 // require the definition and put implements clause to ensure API consistency between the declaration and implementation
@@ -131,7 +131,7 @@ export class FooBase implements FooDefinition {
 
 **Android implementation file (foo.android.ts):**
 
-```typescript
+``` TypeScript
 import { FooBase } from "./foo-common";
 
 // require the common file and extend the base common implementation
@@ -151,7 +151,7 @@ export class Foo extends FooBase {
 
 **iOS implementation file (foo.ios.ts):**
 
-```typescript
+``` TypeScript
 import { FooBase } from "./foo-common";
 
 // require the common file and extend the base common implementation
@@ -175,7 +175,7 @@ _Example:_ [file-system module](tns-core-modules/file-system) (_Note:_ `file-sys
 
 **Declaration file (foo.d.ts):**
 
-```typescript
+``` TypeScript
 export class Foo {
     public running: number;
     public start(): void;
@@ -185,7 +185,7 @@ export class Foo {
 
 **Native Implementation Declaration file (foo-native.d.ts):**
 
-```typescript
+``` TypeScript
 //@private
 // The above statement marks this definition as private so that it is not visible to the users
 
@@ -195,7 +195,7 @@ export function stopNative();
 
 **Android Native Implementation  file (foo-native.android.ts):**
 
-```typescript
+``` TypeScript
 export function startNative(){
     // call native code here
 }
@@ -206,7 +206,7 @@ export function stopNative(){
 
 **iOS Native Implementation  file (foo-native.ios.ts):**
 
-```typescript
+``` TypeScript
 export function startNative(){
     // call native code here
 }
@@ -217,7 +217,7 @@ export function stopNative(){
 
 **Common implementation file (foo.ts):**
 
-```typescript
+``` TypeScript
 import { FooBase as FooDefinition } from ".";
 import { startNative, stopNative } from "./foo-native";
 

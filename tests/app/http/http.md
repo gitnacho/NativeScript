@@ -5,33 +5,45 @@ environment: nativescript
 description: "Examples for using http"
 previous_url: /ApiReference/http/HOW-TO
 ---
+
 # Http module
+
 Using http methods requires to load "http" module.
-{%snippet http-require%}
 
-### Get string from URL
-{%snippet http-get-string%}
+{% snippet http-require %}
 
-### Get JSON from URL
-{%snippet http-get-json%}
+## Get string from URL
 
-### Get Image from URL
-{%snippet http-get-image%}
+{% snippet http-get-string %}
 
-### Get File from URL. By default the file will be saved in Documents folder.
-{%snippet http-get-urlfile%}
+## Get JSON from URL
 
-### Get content as File from URL. You can specify where the file should be saved.
-{%snippet http-get-urlfile-content%}
+{% snippet http-get-json %}
 
-### Get response status code
-{%snippet http-get-response%}
+## Get Image from URL
 
-### Get response headers
-{%snippet http-get-response-headers%}
+{% snippet http-get-image %}
 
-### Get response content
-{%snippet http-get-response-content%}
+## Get File from URL. By default the file will be saved in Documents folder.
 
-### Post JSON
-{%snippet http-post-json%}
+{% snippet http-get-urlfile %}
+
+## Get content as File from URL. You can specify where the file should be saved.
+
+{% snippet http-get-urlfile-content %}
+
+## Get response status code
+
+{% snippet http-get-response %}
+
+## Get response headers
+
+{% snippet http-get-response-headers %}
+
+## Get response content
+
+{% snippet http-get-response-content %}
+
+## Post JSON
+
+{% snippet http-post-json %}

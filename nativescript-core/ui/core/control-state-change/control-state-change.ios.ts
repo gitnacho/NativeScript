@@ -2,7 +2,7 @@
 import { ControlStateChangeListener as ControlStateChangeListenerDefinition } from ".";
 
 class ObserverClass extends NSObject {
-    // NOTE: Refactor this - use Typescript property instead of strings....
+    // NOTE: Refactor this - use TypeScript property instead of strings....
     observeValueForKeyPathOfObjectChangeContext(path: string) {
         if (path === "selected") {
             this["_owner"]._onSelectedChanged();

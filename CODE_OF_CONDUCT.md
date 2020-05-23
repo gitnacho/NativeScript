@@ -6,16 +6,16 @@ Towards this end, certain behaviors and practices will not be tolerated.
 
 ## tl;dr
 
-- Be respectful. 
-- We're here to help.
-- Abusive behavior is never tolerated. 
-- Violations of this code may result in swift and permanent expulsion from the NativeScript community channels. 
+* Be respectful.
+* We're here to help.
+* Abusive behavior is never tolerated.
+* Violations of this code may result in swift and permanent expulsion from the NativeScript community channels.
 
 ## Administrators
 
-- Dan Wilson (@DanWilson on Slack)
-- Jen Looper (@jen.looper on Slack)
-- TJ VanToll (@tjvantoll on Slack)
+* Dan Wilson (@DanWilson on Slack)
+* Jen Looper (@jen.looper on Slack)
+* TJ VanToll (@tjvantoll on Slack)
 
 ## Scope
 

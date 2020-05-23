@@ -5,11 +5,14 @@ environment: nativescript
 description: "Examples for using dock-layout"
 previous_url: /ApiReference/ui/layouts/dock-layout/HOW-TO
 ---
-# DockLayout
-Using a DockLayout requires the DockLayout module.
-{%snippet dock-layout-require%}
 
-### Declaring a DockLayout
+# DockLayout
+
+Using a DockLayout requires the DockLayout module.
+{% snippet dock-layout-require %}
+
+## Declaring a DockLayout
+
 ``` XML
 <Page>
  <DockLayout stretchLastChild="true">
@@ -23,16 +26,21 @@ Using a DockLayout requires the DockLayout module.
 ```
 
 Other frequently used modules when working with a DockLayout include:
-{%snippet dock-layout-others%}
+
+{% snippet dock-layout-others %}
 
 ## Create DockLayout
-{%snippet dock-layout-create%}
+
+{% snippet dock-layout-create %}
 
 ## Add child view to layout
-{%snippet dock-layout-addchild%}
+
+{% snippet dock-layout-addchild %}
 
 ## Remove child view from layout
-{%snippet dock-layout-removechild%}
+
+{% snippet dock-layout-removechild %}
 
 ## Setting the dock property
-{%snippet dock-layout-setdocl%}
+
+{% snippet dock-layout-setdocl %}

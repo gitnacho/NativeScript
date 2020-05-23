@@ -7,7 +7,7 @@
 
 The CSS value string "1px 0 0 5% .5px .10 1.5" yields:
 
-```js
+``` JavaScript
 [
   { type: 'number', string: '1px', unit: 'px', value: 1 },
   { type: 'number', string: '0', unit: '', value: 0 },

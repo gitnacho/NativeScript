@@ -39,7 +39,7 @@ const getVisibleViewController = ios.getVisibleViewController;
 const majorVersion = ios.MajorVersion;
 
 // NOTE: UIResponder with implementation of window - related to https://github.com/NativeScript/ios-runtime/issues/430
-// TODO: Refactor the UIResponder to use Typescript extends when this issue is resolved:
+// TODO: Refactor the UIResponder to use TypeScript extends when this issue is resolved:
 // https://github.com/NativeScript/ios-runtime/issues/1012
 const Responder = (<any>UIResponder).extend({
     get window() {

@@ -1,45 +1,57 @@
-***e2e tests execution***
+# e2e tests execution
 
 1. Local setup
-    - install appium and all requirments related to `nativescript-dev-appium` plugin usage
-    - download images:
+   + install appium and all requirments related to `nativescript-dev-appium` plugin usage
+   + download images:
 
-        ```npm run load-images Emulator-Api23-Default "iPhone X 12"```
+     ``` Node
+     npm run load-images Emulator-Api23-Default "iPhone X 12"
+     ```
 
-        or load multiple folders:
+     or load multiple folders:
 
-        ``` npm run load-images Emulator-Api23-Default Emulator-Google-Api28 "iPhone X 12"```
+     ``` Node
+      npm run load-images Emulator-Api23-Default Emulator-Google-Api28 "iPhone X 12"
+     ```
 
-        or load all folders:
+     or load all folders:
 
-        ``` npm run load-images all```
+     ``` Node
+      npm run load-images all
+     ```
 
-        This command will download https://github.com/NativeScript/functional-tests-images/tree/master/uitestsapp and sparse all passed directories [emulator-name|simulator-name]
-    - rename/ create your device so that it matches folder name, respectively api level and density of emulators.
+     This command will download <https://github.com/NativeScript/functional-tests-images/tree/master/uitestsapp> and sparse all passed directories [emulator-name|simulator-name]
 
-        You can also use scripts:
+   + rename/ create your device so that it matches folder name, respectively api level and density of emulators.
 
-        `npm run update-emulators` to update your emulator density.
+     You can also use scripts:
 
-        If you need to download system image and create emulator use:
+     `npm run update-emulators` to update your emulator density.
 
-        `npm run update-emulators -- --update-system-images`
-2. Test execution
-    - Run test compilation in separate terminal and don't kill it.
+     If you need to download system image and create emulator use:
 
-        `npm run test-watch`
-    - It is highly recommended during the development to use
+     `npm run update-emulators -- --update-system-images`
 
-        `npm run test [android|ios]` along with `tns run [android|ios]`. This command will use already installed app on the device.
-        For example: Open terminal1 and run: `tns run android` and open new terminal2 and run: `npm run test android`
-3. Debug test.
-    - Run:
+1. Test execution
+   + Run test compilation in separate terminal and don't kill it.
 
-        `npm run e2e-debug [android|ios]`
-run in separate console and don't kill it. This command will start appium server and driver and use the installed app on the device but it will not execute tests.
-    - Go to vs code debugging and use a config like:
+     `npm run test-watch`
 
-    ```
+   + It is highly recommended during the development to use
+
+     `npm run test [android|ios]` along with `tns run [android|ios]`. This command will use already installed app on the device.
+     For example: Open terminal1 and run: `tns run android` and open new terminal2 and run: `npm run test android`
+
+1. Debug test.
+   + Run:
+
+     `npm run e2e-debug [android|ios]`
+
+     run in separate console and don't kill it. This command will start appium server and driver and use the installed app on the device but it will not execute tests.
+
+   + Go to vs code debugging and use a config like:
+
+    ``` YAML
         {
             "type": "node",
             "request": "launch",
@@ -57,20 +69,20 @@ run in separate console and don't kill it. This command will start appium server
             ],
             "internalConsoleOptions": "openOnSessionStart"
         }
+    ```
 
-***mocha options***
+## mocha options
 
 mocha opt file is located at "../config/mocha.opts".
 
+``` YAML
        --timeout 999999
        --recursive e2e
        --reporter mochawesome
        --reporter-options quiet=true,html=true,inline=true,autoOpen=true
        --exit
+```
 
+## grep particular suit or test
 
-***grep particular suit or test***
-
-` npm run e2e ios -- --grep=tabs-tab(s-\\w+)-suite`
-
-
+`npm run e2e ios -- --grep=tabs-tab(s-\\w+)-suite`

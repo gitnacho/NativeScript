@@ -5,110 +5,147 @@ environment: nativescript
 description: "Examples for using observable-array"
 previous_url: /ApiReference/data/observable-array/HOW-TO
 ---
+
 # Observable Array module
-{%snippet observable-array-require%}
 
-### Create ObservableArray from array.
-{%snippet observable-array-create%}
+{% snippet observable-array-require %}
 
-### Create ObservableArray from arguments.
-{%snippet observable-array-arguments%}
+## Create ObservableArray from array.
 
-### Create ObservableArray with specific length.
-{%snippet observable-array-length%}
+{% snippet observable-array-create %}
 
-### Set ObservableArray length to new value.
-{%snippet observable-array-newvalue%}
+## Create ObservableArray from arguments.
 
-### Get item at specified index using getItem(index) method.
-{%snippet observable-array-getitem%}
+{% snippet observable-array-arguments %}
 
-### Set item at specified index using setItem(index, item) method.
-{%snippet observable-array-setitem%}
+## Create ObservableArray with specific length.
 
-### Set item at specified index using setItem(index, item) method and observe change event data.
-{%snippet observable-array-eventdata%}
+{% snippet observable-array-length %}
 
-### Use concat() method to combine ObservableArray with array.
-{%snippet observable-array-combine%}
+## Set ObservableArray length to new value.
 
-### Use join() method to convert ObservableArray to comma separated string.
-{%snippet observable-array-join%}
+{% snippet observable-array-newvalue %}
 
-### Use join(separator) method to convert ObservableArray to string separated with specified separator.
-{%snippet observable-array-join-separator%}
+## Get item at specified index using getItem(index) method.
 
-### Use pop() method to remove the last element.
-{%snippet observable-array-join-pop%}
+{% snippet observable-array-getitem %}
 
-### Handle "change" event to know more info about the change after calling pop() method.
-{%snippet observable-array-join-change%}
+## Set item at specified index using setItem(index, item) method.
 
-### Use push() method to add single element to the array.
-{%snippet observable-array-push%}
+{% snippet observable-array-setitem %}
 
-### Handle "change" event to know more info about the change after calling push() method with single element.
-{%snippet observable-array-change-push%}
+## Set item at specified index using setItem(index, item) method and observe change event data.
 
-### Use push() method to add multiple elements to the array.
-{%snippet observable-array-push-multiple%}
+{% snippet observable-array-eventdata %}
 
-### Handle "change" event to know more info about the change after calling push() method with multiple elements.
-{%snippet observable-array-push-multiple-info%}
+## Use concat() method to combine ObservableArray with array.
 
-### Use push() method to add multiple elements from source array to the ObservableArray.
-{%snippet observable-array-push-source%}
+{% snippet observable-array-combine %}
 
-### Handle "change" event to know more info about the change after calling push() method with multiple elements from source array.
-{%snippet observable-array-push-source-info%}
+## Use join() method to convert ObservableArray to comma separated string.
 
-### Use reverse() method to reverse the elements order of the ObservableArray.
-{%snippet observable-array-reverse%}
+{% snippet observable-array-join %}
 
-### Use shift() method to remove the first element of the array.
-{%snippet observable-array-shift%}
+## Use join(separator) method to convert ObservableArray to string separated with specified separator.
 
-### Handle "change" event to know more info about the change after calling shift() method.
-{%snippet observable-array-shift-change%}
+{% snippet observable-array-join-separator %}
 
-### Use slice() method to return array with all ObservableArray elements.
-{%snippet observable-array-slice%}
+## Use pop() method to remove the last element.
 
-### Use slice(star, end) method to return section of the array.
-{%snippet observable-array-slice-args%}
+{% snippet observable-array-join-pop %}
 
-### Use sort() method to sort the array.
-{%snippet observable-array-sort%}
+## Handle "change" event to know more info about the change after calling pop() method.
 
-### Use sort(compareFunction) method to sort the array with your own comparing logic.
-{%snippet observable-array-sort-comparer%}
+{% snippet observable-array-join-change %}
 
-### Use splice(start, deleteCount) method to delete elements in the array.
-{%snippet observable-array-splice%}
+## Use push() method to add single element to the array.
 
-### Handle "change" event to know more info about the change after calling splice(start, deleteCount) method.
-{%snippet observable-array-splice-change%}
+{% snippet observable-array-push %}
 
-### Use splice(start, deleteCount, ...arguments) method to remove and insert elements in the array.
-{%snippet observable-array-splice-args%}
+## Handle "change" event to know more info about the change after calling push() method with single element.
 
-### Handle "change" event to know more info about the change after calling splice(start, deleteCount, ...arguments) method.
-{%snippet observable-array-splice-args-change%}
+{% snippet observable-array-change-push %}
 
-### Use unshift(item1, item2... itemN) method to insert elements from the start of the array.
-{%snippet observable-array-unshift%}
+## Use push() method to add multiple elements to the array.
 
-### Handle "change" event to know more info about the change after calling unshift(item1, item2... itemN) method.
-{%snippet observable-array-unshift-change%}
+{% snippet observable-array-push-multiple %}
 
-### Use indexOf(item) method to get the index of the desired item in the array.
-{%snippet observable-array-indexof%}
+## Handle "change" event to know more info about the change after calling push() method with multiple elements.
 
-### Use indexOf(item, fromIndex) method to get the index of the desired item in the array starting from specified index.
-{%snippet observable-array-indexof-args%}
+{% snippet observable-array-push-multiple-info %}
 
-### Use lastIndexOf(item) method to get the last index of the desired item in the array.
-{%snippet observable-array-lastindexof%}
+## Use push() method to add multiple elements from source array to the ObservableArray.
 
-### Use lastIndexOf(item, fromIndex) method to get the last index of the desired item in the array starting from specified index.
-{%snippet observable-array-lastindexof-args%}
+{% snippet observable-array-push-source %}
+
+## Handle "change" event to know more info about the change after calling push() method with multiple elements from source array.
+
+{% snippet observable-array-push-source-info %}
+
+## Use reverse() method to reverse the elements order of the ObservableArray.
+
+{% snippet observable-array-reverse %}
+
+## Use shift() method to remove the first element of the array.
+
+{% snippet observable-array-shift %}
+
+## Handle "change" event to know more info about the change after calling shift() method.
+
+{% snippet observable-array-shift-change %}
+
+## Use slice() method to return array with all ObservableArray elements.
+
+{% snippet observable-array-slice %}
+
+## Use slice(star, end) method to return section of the array.
+
+{% snippet observable-array-slice-args %}
+
+## Use sort() method to sort the array.
+
+{% snippet observable-array-sort %}
+
+## Use sort(compareFunction) method to sort the array with your own comparing logic.
+
+{% snippet observable-array-sort-comparer %}
+
+## Use splice(start, deleteCount) method to delete elements in the array.
+
+{% snippet observable-array-splice %}
+
+## Handle "change" event to know more info about the change after calling splice(start, deleteCount) method.
+
+{% snippet observable-array-splice-change %}
+
+## Use splice(start, deleteCount, ...arguments) method to remove and insert elements in the array.
+
+{% snippet observable-array-splice-args %}
+
+## Handle "change" event to know more info about the change after calling splice(start, deleteCount, ...arguments) method.
+
+{% snippet observable-array-splice-args-change %}
+
+## Use unshift(item1, item2... itemN) method to insert elements from the start of the array.
+
+{% snippet observable-array-unshift %}
+
+## Handle "change" event to know more info about the change after calling unshift(item1, item2... itemN) method.
+
+{% snippet observable-array-unshift-change %}
+
+## Use indexOf(item) method to get the index of the desired item in the array.
+
+{% snippet observable-array-indexof %}
+
+## Use indexOf(item, fromIndex) method to get the index of the desired item in the array starting from specified index.
+
+{% snippet observable-array-indexof-args %}
+
+## Use lastIndexOf(item) method to get the last index of the desired item in the array.
+
+{% snippet observable-array-lastindexof %}
+
+## Use lastIndexOf(item, fromIndex) method to get the last index of the desired item in the array starting from specified index.
+
+{% snippet observable-array-lastindexof-args %}

@@ -1,1 +1,1 @@
-Contains the application abstraction with all related methods.
+# Contains the application abstraction with all related methods

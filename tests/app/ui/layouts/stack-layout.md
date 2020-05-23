@@ -5,11 +5,15 @@ environment: nativescript
 description: "Examples for using stack-layout"
 previous_url: /ApiReference/ui/layouts/stack-layout/HOW-TO
 ---
-# StackLayout
-Using a StackLayout requires the StackLayout module.
-{%snippet stack-layout-require%}
 
-### Declaring a StackLayout.
+# StackLayout
+
+Using a StackLayout requires the StackLayout module.
+
+{% snippet stack-layout-require %}
+
+## Declaring a StackLayout.
+
 ``` XML
 <Page>
   <StackLayout orientation="horizontal">
@@ -19,14 +23,17 @@ Using a StackLayout requires the StackLayout module.
 ```
 
 ## Create StackLayout
-{%snippet stack-layout-new%}
+
+{% snippet stack-layout-new %}
 
 ## Add child view to layout
-{%snippet stack-layout-addchild%}
+
+{% snippet stack-layout-addchild %}
 
 ## Remove child view from layout
-{%snippet stack-layout-remove%}
+
+{% snippet stack-layout-remove %}
 
 ## Change layout orientation to Horizontal
-{%snippet stack-layout-horizontal%}
 
+{% snippet stack-layout-horizontal %}

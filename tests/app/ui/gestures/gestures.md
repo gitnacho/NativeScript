@@ -5,60 +5,81 @@ environment: nativescript
 description: "Examples for using gestures"
 previous_url: /ApiReference/ui/gestures/HOW-TO
 ---
+
 # Gestures
+
 Detecting user gestures requires the "ui/gestures" module.
-{%snippet gestures-require%}
 
-### Double Tap
-{%snippet gestures-double-tap%}
+{% snippet gestures-require %}
 
-### Double Tap
-{%snippet gestures-double-tap-alt%}
+## Double Tap
 
-### Long Press
-{%snippet gestures-long-press%}
+{% snippet gestures-double-tap %}
 
-### Long Press
-{%snippet gestures-long-press-alt%}
+## Double Tap:
 
-### Pan
-{%snippet gestures-pan%}
+{% snippet gestures-double-tap-alt %}
 
-### Pan
-{%snippet gestures-pan-alt%}
+## Long Press
 
-### Pinch
-{%snippet gestures-pan-pinch%}
+{% snippet gestures-long-press %}
 
-### Pinch
-{%snippet gestures-pan-pinch-alt%}
+## Long Press:
 
-### Rotation
-{%snippet gestures-rotation%}
+{% snippet gestures-long-press-alt %}
 
-### Rotation
-{%snippet gestures-rotation-alt%}
+## Pan
 
-### Swipe
-{%snippet gestures-swipe%}
+{% snippet gestures-pan %}
 
-### Swipe
-{%snippet gestures-swipe-alt%}
+## Pan:
 
-### Tap
-{%snippet gestures-tap%}
+{% snippet gestures-pan-alt %}
 
-### Tap
-{%snippet gestures-tap-alt%}
+## Pinch
 
-### Stop observing
-{%snippet gestures-stop-observe%}
+{% snippet gestures-pan-pinch %}
 
-### Multiple gestures
-{%snippet gestures-multiple%}
+## Pinch:
 
-### Multiple gestures as comma separated string
-{%snippet gestures-string%}
+{% snippet gestures-pan-pinch-alt %}
 
-### Events combined with gestures as comma separated string
-{%snippet gestures-events-string%}
+## Rotation
+
+{% snippet gestures-rotation %}
+
+## Rotation:
+
+{% snippet gestures-rotation-alt %}
+
+## Swipe
+
+{% snippet gestures-swipe %}
+
+## Swipe:
+
+{% snippet gestures-swipe-alt %}
+
+## Tap
+
+{% snippet gestures-tap %}
+
+## Tap:
+
+{% snippet gestures-tap-alt %}
+
+## Stop observing
+
+{% snippet gestures-stop-observe %}
+
+## Multiple gestures
+
+{% snippet gestures-multiple %}
+
+## Multiple gestures as comma separated string
+
+{% snippet gestures-string %}
+
+## Events combined with gestures as comma separated string
+
+{% snippet gestures-events-string %}

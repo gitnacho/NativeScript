@@ -1,5 +1,8 @@
-﻿Dialogs module. Examples:
-```js
+﻿# Dialogs module
+
+Examples:
+
+``` JavaScript
 require("globals");
 
 var dialogs = require("ui/dialogs");
@@ -36,28 +39,30 @@ dialogs.login("Enter your user name and password:", "", "",
                 })
   .then(function(r) {
         dialogs.alert("Result:" + r.result + " User name:" + r.userName + " Password:" + r.password);
-		if(r.result) {
-			// login here
-		} else if(r.result === false) {
-			// perform something on cancel if you want
-		} else if(r.result === "undefined") {
-			// you can create new user credentials here for example
-		}
+        if(r.result) {
+            // login here
+        } else if(r.result === false) {
+            // perform something on cancel if you want
+        } else if(r.result === "undefined") {
+            // you can create new user credentials here for example
+        }
    }).fail(function(e){ console.log(e)});
 ```
+
 Custom dialogs:
-```js
-	require("globals");
-	var dialogs = require("ui/dialogs");
 
-	/// Splash
-	var d = new dialogs.Dialog("Loading...");
-	d.show();
-	setTimeout(function(){ d.hide(); }, 2000);
+``` JavaScript
+    require("globals");
+    var dialogs = require("ui/dialogs");
 
-	//or cancelable loading dialog
-	var d = new dialogs.Dialog("Loading...",
-		function(r){ dialogs.alert("You just canceled loading!"); }, { cancelButtonText: "Cancel" });
-	d.show();
-	setTimeout(function(){ d.hide(); }, 10000);
+    /// Splash
+    var d = new dialogs.Dialog("Loading...");
+    d.show();
+    setTimeout(function(){ d.hide(); }, 2000);
+
+    //or cancelable loading dialog
+    var d = new dialogs.Dialog("Loading...",
+        function(r){ dialogs.alert("You just canceled loading!"); }, { cancelButtonText: "Cancel" });
+    d.show();
+    setTimeout(function(){ d.hide(); }, 10000);
 ```

@@ -5,24 +5,33 @@ environment: nativescript
 description: "Examples for using timer"
 previous_url: /ApiReference/timer/HOW-TO
 ---
+
 # Timer module
-### How to require timer module
-{%snippet timer-require%}
 
-### Evaluates an expression after 0 milliseconds.
-{%snippet timer-set-zero%}
+## How to require timer module
 
-### Evaluates an expression after 0 milliseconds.
-{%snippet timer-set-zero-args%}
+{% snippet timer-require %}
 
-### Evaluates an expression after a specified number of milliseconds.
-{%snippet timer-set-ten%}
+## Evaluates an expression after 0 milliseconds
 
-### Cancels the evaluation with the clearTimeout method.
-{%snippet timer-set-fifty%}
+{% snippet timer-set-zero %}
 
-### Evaluates an expression each time a specified number of milliseconds has elapsed.
-{%snippet timer-set-expression%}
+## Evaluates an expression after 0 milliseconds:
 
-### Cancel the interval previously started using the setInterval method.
-{%snippet timer-set-interval%}
+{% snippet timer-set-zero-args %}
+
+## Evaluates an expression after a specified number of milliseconds
+
+{% snippet timer-set-ten %}
+
+## Cancels the evaluation with the clearTimeout method
+
+{% snippet timer-set-fifty %}
+
+## Evaluates an expression each time a specified number of milliseconds has elapsed
+
+{% snippet timer-set-expression %}
+
+## Cancel the interval previously started using the setInterval method
+
+{% snippet timer-set-interval %}

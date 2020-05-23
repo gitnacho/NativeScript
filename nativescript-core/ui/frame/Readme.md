@@ -1,14 +1,17 @@
-﻿Use the frame in the following way:
+﻿# Frame
 
-### To navigate to the starting page of the application
-```js
+Use the frame in the following way:
+
+## To navigate to the starting page of the application
+
+``` JavaScript
 // put this in the bootstrap.js
 var app = require("application");
 var frameModule = require("ui/frame");
 
 app.onLaunch = function(context) {
-	var frame = new frameModule.Frame();
-	frame.navigate("testPage");
+    var frame = new frameModule.Frame();
+    frame.navigate("testPage");
 }
 
 // or use the mainModule property of the application module
@@ -16,15 +19,17 @@ app.onLaunch = function(context) {
 app.mainModule = "testPage";
 ```
 
-### To navigate to a new Page
-```js
+## To navigate to a new Page
+
+``` JavaScript
 // take the frame from an existing (and navigatedTo) Page instance
 var frame = page.frame;
 frame.navigate("newPage");
 ```
 
-### To navigate to a new Activity (Android)
-```js
+## To navigate to a new Activity (Android)
+
+``` JavaScript
 // create a new Frame instance
 var frameModule = require("ui/frame");
 var frame = new frameModule.Frame();

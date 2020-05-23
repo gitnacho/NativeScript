@@ -5,11 +5,15 @@ environment: nativescript
 description: "Examples for using Border"
 previous_url: /ApiReference/ui/border/HOW-TO
 ---
-# Border
-Using borders requires the Border module.
-{%snippet border-require%}
 
-### Declaring a Border.
+# Border
+
+Using borders requires the Border module.
+
+{% snippet border-require %}
+
+## Declaring a Border.
+
 ``` XML
  <Page>
      <Border borderRadius="10" borderWidth="2" borderColor="#FF0000">

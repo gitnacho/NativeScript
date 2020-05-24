@@ -1,8 +1,8 @@
 // Types
 import { View as ViewDefinition } from "..";
-import { 
+import {
     HorizontalAlignment as HorizontalAlignmentDefinition,
-    VerticalAlignment as VerticalAlignmentDefinition 
+    VerticalAlignment as VerticalAlignmentDefinition
 } from "../../../styling/style-properties";
 
 // Requires

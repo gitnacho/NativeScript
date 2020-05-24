@@ -25,20 +25,20 @@ describe("ui", () => {
 
                     return { rules, map };
                 }
-                
+
                 function createOne(css: string, source: string = "css-selectors.ts@test"): selector.RuleSet {
                     let {rules} = create(css, source);
                     assert.equal(rules.length, 1);
 
                     return rules[0];
                 }
-                
+
                 it("single selector", () => {
                     let rule = createOne(`* { color: red; }`);
                     assert.isTrue(rule.selectors[0].match({ cssType: "button" }));
                     assert.isTrue(rule.selectors[0].match({ cssType: "image" }));
                 });
-                
+
                 it("two selectors", () => {
                     let rule = createOne(`button, image { color: red; }`);
                     assert.isTrue(rule.selectors[0].match({ cssType: "button" }));
@@ -46,20 +46,20 @@ describe("ui", () => {
                     assert.isFalse(rule.selectors[0].match({ cssType: "stacklayout" }));
                     assert.isFalse(rule.selectors[1].match({ cssType: "stacklayout" }));
                 });
-                
+
                 it("narrow selection", () => {
                     let {map} = create(`
                         .login { color: blue; }
                         button { color: red; }
                         image { color: green; }
                     `);
-            
+
                     let buttonQuerry = map.query({ cssType: "button" }).selectors;
                     assert.equal(buttonQuerry.length, 1);
                     assert.includeDeepMembers(buttonQuerry[0].ruleset.declarations, [
                         { property: "color", value: "red" }
                     ]);
-                
+
                     let imageQuerry = map.query({ cssType: "image", cssClasses: new Set(["login"]) }).selectors;
                     assert.equal(imageQuerry.length, 2);
                     // Note class before type
@@ -70,7 +70,7 @@ describe("ui", () => {
                         { property: "color", value: "blue" }
                     ]);
                 });
-                
+
                 let positiveMatches = {
                     "*": (view) => true,
                     "type": (view) => view.cssType === "type",
@@ -80,7 +80,7 @@ describe("ui", () => {
                     "[src1]": (view) => "src1" in view,
                     "[src2='src-value']": (view) => view["src2"] === "src-value"
                 };
-                
+
                 let positivelyMatchingView = {
                     cssType: "type",
                     id: "id",
@@ -89,7 +89,7 @@ describe("ui", () => {
                     "src1": "src",
                     "src2": "src-value"
                 };
-                
+
                 let negativelyMatchingView = {
                     cssType: "nottype",
                     id: "notid",
@@ -98,7 +98,7 @@ describe("ui", () => {
                     // Has no "src1"
                     "src2": "not-src-value"
                 };
-                
+
                 it("simple selectors match", () => {
                     for (let sel in positiveMatches) {
                         let css = sel + " { color: red; }";
@@ -109,7 +109,7 @@ describe("ui", () => {
                         }
                     }
                 });
-                
+
                 it("two selector sequence positive match", () => {
                     for (let firstStr in positiveMatches) {
                         for (let secondStr in positiveMatches) {
@@ -124,7 +124,7 @@ describe("ui", () => {
                         }
                     }
                 });
-                
+
                 it("direct parent combinator", () => {
                     let rule = createOne(`listview > item:selected { color: red; }`);
                     assert.isTrue(rule.selectors[0].match({
@@ -145,7 +145,7 @@ describe("ui", () => {
                         }
                     }), "Item in stack in list view NOT expected to match.");
                 });
-                
+
                 it("ancestor combinator", () => {
                     let rule = createOne(`listview item:selected { color: red; }`);
                     assert.isTrue(rule.selectors[0].match({
@@ -176,7 +176,7 @@ describe("ui", () => {
                         }
                     }), "Item in stack in page NOT expected to match.");
                 });
-                
+
                 it("backtracking css selector", () => {
                     let sel = createOne(`a>b c { color: red; }`).selectors[0];
                     let child = {

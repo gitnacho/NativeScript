@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package org.nativescript.widgets;
 
@@ -30,13 +30,13 @@ public abstract class LayoutBase extends ViewGroup {
     protected LayoutParams generateDefaultLayoutParams() {
         return new CommonLayoutParams();
     }
-    
+
     /**
      * {@inheritDoc}
      */
     @Override
     public LayoutParams generateLayoutParams(AttributeSet attrs) {
-        return new CommonLayoutParams();        
+        return new CommonLayoutParams();
     }
 
     /**
@@ -77,18 +77,18 @@ public abstract class LayoutBase extends ViewGroup {
         // because passThroughParent is set to true
         return false;
     }
-	
+
 	protected static int getGravity(View view) {
 		int gravity = -1;
 		LayoutParams params = view.getLayoutParams();
 		if (params instanceof FrameLayout.LayoutParams) {
-			gravity = ((FrameLayout.LayoutParams)params).gravity;	
+			gravity = ((FrameLayout.LayoutParams)params).gravity;
 		}
-	        
+
         if (gravity == -1) {
             gravity = Gravity.FILL;
         }
-        
+
         return gravity;
 	}
 }

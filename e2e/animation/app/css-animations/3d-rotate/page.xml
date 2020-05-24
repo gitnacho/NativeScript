@@ -14,8 +14,8 @@
     <Button text="XYZ-3D" tap="onAnimateXYZ3D" row="2" col="1"/>
 
     <AbsoluteLayout width="300" height="300" clipToBounds="true" backgroundColor="LightGray" row="3" colSpan="3">
-      <Image id="view" src="~/res/icon_100x100.png" 
-          width="100" height="100" 
+      <Image id="view" src="~/res/icon_100x100.png"
+          width="100" height="100"
           left="100" top="100" />
     </AbsoluteLayout>
   </GridLayout>

@@ -147,7 +147,7 @@ export class Style extends Observable {
     /**
      * Gets or sets the content inset for the android actionbar.
      * The content inset affects the valid area for ActionBar content; insets can be used to effectively align ActionBar content along well-known gridlines.
-     * 
+     *
      * This property is effective on Android API level 21 or later.
      */
     public androidContentInset: string | Length;
@@ -155,7 +155,7 @@ export class Style extends Observable {
     /**
      * Gets or sets the left content inset for the android actionbar.
      * The content inset affects the valid area for ActionBar content; insets can be used to effectively align ActionBar content along well-known gridlines.
-     * 
+     *
      * This property is effective on Android API level 21 or later.
      */
     public androidContentInsetLeft: Length;
@@ -163,7 +163,7 @@ export class Style extends Observable {
     /**
      * Gets or sets the right content inset for the android actionbar.
      * The content inset affects the valid area for ActionBar content; insets can be used to effectively align ActionBar content along well-known gridlines.
-     * 
+     *
      * This property is effective on Android API level 21 or later.
      */
     public androidContentInsetRight: Length;

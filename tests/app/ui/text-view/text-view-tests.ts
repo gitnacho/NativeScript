@@ -20,8 +20,8 @@ import * as observable from "@nativescript/core/data/observable";
 // >> text-view-xml
 // <Page loaded="pageLoaded">
 //  <StackLayout orientation="vertical">
-//    {%raw%}<TextView text="{{ someProperty }}" />
-//    <TextView text="{{ someProperty }}" />{%endraw%}
+//    {% raw %}<TextView text="{{ someProperty }}" />
+//    <TextView text="{{ someProperty }}" />{% endraw %}
 //  </StackLayout>
 // </Page>
 // << text-view-xml

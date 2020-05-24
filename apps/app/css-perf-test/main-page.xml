@@ -1,4 +1,4 @@
-<Page 
+<Page
     xmlns="http://schemas.nativescript.org/tns.xsd" navigatedTo="navigatedTo">
     <ScrollView>
         <StackLayout>
@@ -302,6 +302,6 @@
                 <Label text="author " class="author" col="1" row="1" />
                 <Label text="comments" class="comments" col="2" row="1" />
             </GridLayout>
-        </StackLayout> 
+        </StackLayout>
     </ScrollView>
 </Page>

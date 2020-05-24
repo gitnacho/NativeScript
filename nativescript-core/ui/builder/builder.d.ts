@@ -57,7 +57,7 @@ export class Builder {
     static parseMultipleTemplates(value: string, exports?: any): Array<KeyedTemplate>;
 
     /**
-     * Loads component from module with context 
+     * Loads component from module with context
      * @param moduleName the module name
      * @param exports the context of the component to be loaded
      */

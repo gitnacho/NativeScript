@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package org.nativescript.widgets;
 
@@ -17,11 +17,11 @@ public class StackLayout extends LayoutBase {
     static final String TAG = "JS";
     private int _totalLength = 0;
     private Orientation _orientation = Orientation.vertical;
-    
+
     public StackLayout(Context context) {
 		super(context);
 	}
-    
+
     public Orientation getOrientation() {
         return this._orientation;
     }
@@ -81,8 +81,8 @@ public class StackLayout extends LayoutBase {
             }
 
             if (isVertical) {
-                // Measuring android.widget.ListView, with no height property set, with MeasureSpec.AT_MOST will 
-                // result in height required for all list view items or the maximum available space for the StackLayout. 
+                // Measuring android.widget.ListView, with no height property set, with MeasureSpec.AT_MOST will
+                // result in height required for all list view items or the maximum available space for the StackLayout.
                 // Any following controls will be visible only if enough space left.
                 CommonLayoutParams.measureChild(child, childMeasureSpec, MeasureSpec.makeMeasureSpec(remainingLength, measureSpecMode));
 
@@ -92,7 +92,7 @@ public class StackLayout extends LayoutBase {
 
                 final int childMeasuredWidth = CommonLayoutParams.getDesiredWidth(child);
                 final int childMeasuredHeight = CommonLayoutParams.getDesiredHeight(child);
-                
+
                 measureWidth = Math.max(measureWidth, childMeasuredWidth);
                 measureHeight += childMeasuredHeight;
                 remainingLength = Math.max(0, remainingLength - childMeasuredHeight);
@@ -101,12 +101,12 @@ public class StackLayout extends LayoutBase {
             	CommonLayoutParams.measureChild(child, MeasureSpec.makeMeasureSpec(remainingLength, measureSpecMode), childMeasureSpec);
                 final int childMeasuredWidth = CommonLayoutParams.getDesiredWidth(child);
                 final int childMeasuredHeight = CommonLayoutParams.getDesiredHeight(child);
-                
+
                 measureHeight = Math.max(measureHeight, childMeasuredHeight);
                 measureWidth += childMeasuredWidth;
                 remainingLength = Math.max(0, remainingLength - childMeasuredWidth);
             }
-            
+
             childState = combineMeasuredStates(childState, child.getMeasuredState());
         }
 
@@ -148,10 +148,10 @@ public class StackLayout extends LayoutBase {
         int childTop = 0;
         int childLeft = paddingLeft;
         int childRight = right - left - paddingRight;
-        
+
         int gravity = LayoutBase.getGravity(this);
         final int verticalGravity = gravity & Gravity.VERTICAL_GRAVITY_MASK;
-        
+
         switch (verticalGravity) {
             case Gravity.CENTER_VERTICAL:
                 childTop = (bottom - top - this._totalLength) / 2 + paddingTop - paddingBottom;
@@ -191,10 +191,10 @@ public class StackLayout extends LayoutBase {
         int childTop = paddingTop;
         int childLeft = 0;
         int childBottom = bottom - top - paddingBottom;
-        
+
         int gravity = LayoutBase.getGravity(this);
         final int horizontalGravity = Gravity.getAbsoluteGravity(gravity, this.getLayoutDirection()) & Gravity.HORIZONTAL_GRAVITY_MASK;
-        
+
         switch (horizontalGravity) {
             case Gravity.CENTER_HORIZONTAL:
                 childLeft = (right - left - this._totalLength) / 2 + paddingLeft - paddingRight;

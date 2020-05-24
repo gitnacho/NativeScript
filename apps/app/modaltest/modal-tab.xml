@@ -38,5 +38,5 @@
                 <Button text="Show Modal Frame" tap="onModalFrame" />
             </StackLayout>
         </ScrollView>
-    </TabViewItem> 
+    </TabViewItem>
 </TabView>

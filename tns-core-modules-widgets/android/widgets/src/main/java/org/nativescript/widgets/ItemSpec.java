@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package org.nativescript.widgets;
 
@@ -23,13 +23,13 @@ public class ItemSpec {
 
     GridLayout owner;
     int _actualLength = 0;
-    
+
     @Override
     public boolean equals(Object o) {
     	if (!(o instanceof ItemSpec)) {
     		return false;
     	}
-    	
+
     	ItemSpec other = (ItemSpec)o;
     	 return (this._unitType == other._unitType) && (this._value == other._value) && (this.owner == other.owner);
     }
@@ -53,7 +53,7 @@ public class ItemSpec {
     public int getValue() {
         return this._value;
     }
-    
+
     public int getActualLength() {
         return this._actualLength;
     }

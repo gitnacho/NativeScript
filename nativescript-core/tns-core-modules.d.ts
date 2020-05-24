@@ -57,21 +57,21 @@ declare function Interfaces(...interfaces): ClassDecorator;
 declare function JavaProxy(nativeClassName: string): ClassDecorator;
 
 /**
- * Important: Not applicable to Objective-C classes (iOS platform)
+ * **Important**: Not applicable to Objective-C classes (iOS platform)
  * Decorates class that extends native Java class
  * @param interfaces An array of fully-classified Java interface names that the class must implement.
  */
 declare function Interfaces(interfaces: any[]): ClassDecorator;
 
 /**
- * Important: Not applicable to Java classes (Android platform)
+ * **Important**: Not applicable to Java classes (Android platform)
  * Decorates a class that implements native Objective-C protocols.
  * @param protocols An array of fully-classified Objective-C protocol names that the class must implement.
  */
 declare function ObjCClass(...protocols: any[]): ClassDecorator;
 
 /**
- * Important: Not applicable to Java methods (Android platform)
+ * **Important**: Not applicable to Java methods (Android platform)
  * Decorates method that it is exposed in Objective-C.
  * The JS name of the method will be used as the name of the native method
  * and the return type will be set to `interop.types.void`
@@ -79,7 +79,7 @@ declare function ObjCClass(...protocols: any[]): ClassDecorator;
 declare function ObjCMethod(): MethodDecorator;
 
 /**
- * Important: Not applicable to Java methods (Android platform)
+ * **Important**: Not applicable to Java methods (Android platform)
  * Decorates method that it is exposed in Objective-C.
  * @param name The name of the method to be exposed.
  * The native return type will be set to `interop.types.void`.

@@ -68,7 +68,7 @@ function processDefinitionFile(entry: EntryInfo) {
     // Re-export everything from d.ts file
     createReExportFile(relativeFilePathNoExt, ".d.ts");
 
-    // This might be only a definitions file. 
+    // This might be only a definitions file.
     // So check if there is ts/js files before creating TS file with re-exports
     const baseFile = path.join(inputFolder, relativeFilePathNoExt);
     if (fs.existsSync(baseFile + ".ts") ||
@@ -176,7 +176,7 @@ function generateExportsForPrivateModules() {
 
     generateExportsForPrivateModules();
 
-    // Generate tests in 
+    // Generate tests in
     generateTestFile()
 })().catch(e => {
     console.log("Error generating tns-core-modules files: " + e);

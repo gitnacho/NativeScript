@@ -57,7 +57,7 @@ export class Builder {
         } else {
             const exports = context ? getExports(context) : undefined;
             const componentModule = parseInternal(value, exports);
-    
+
             return componentModule && componentModule.component;
         }
     }
@@ -71,10 +71,10 @@ export class Builder {
         } else {
             componentModule = loadCustomComponent(pathOrOptions.path, pathOrOptions.name, pathOrOptions.attributes, pathOrOptions.exports, pathOrOptions.page, true);
         }
-    
+
         return componentModule && componentModule.component;
     }
-     
+
     static parseMultipleTemplates(value: string, context: any): Array<KeyedTemplate> {
         const dummyComponent = `<ListView><ListView.itemTemplates>${value}</ListView.itemTemplates></ListView>`;
 

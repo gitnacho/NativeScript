@@ -33,7 +33,7 @@ export function pushToSystemCssClasses(value: string): number;
 /**
  * Removes value from the list of current system classes
  * Intended for internal use only
- * @param value 
+ * @param value
  */
 export function removeSystemCssClass(value: string): string;
 

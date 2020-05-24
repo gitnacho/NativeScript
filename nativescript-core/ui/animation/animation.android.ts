@@ -3,9 +3,9 @@ import { AnimationDefinitionInternal, AnimationPromise, PropertyAnimation } from
 import { View } from "../core/view";
 
 // Requires
-import { 
+import {
     AnimationBase, Properties, CubicBezierAnimationCurve, Color, traceWrite,
-    traceEnabled, traceCategories, traceType 
+    traceEnabled, traceCategories, traceType
 } from "./animation-common";
 import {
     opacityProperty, backgroundColorProperty, rotateProperty, rotateXProperty, rotateYProperty,

@@ -20,7 +20,7 @@ export function test_device_screen() {
     TKUnit.assert(platformModule.device.uuid, "Device UUID not initialized.");
 
     TKUnit.assert(platformModule.device.language, "Preferred language not initialized.");
-    
+
     // NSLocale.currentLocale.objectForKey(NSLocaleCountryCode) not initialized by default on iOS13 simulator;
     // can be set through Settings -> General -> Language & Region -> Region
     if (platformModule.isAndroid || ios.MajorVersion < 13) {

@@ -150,13 +150,13 @@ export class Frame extends FrameBase {
 
     _onAttachedToWindow(): void {
         super._onAttachedToWindow();
-        
+
         // _onAttachedToWindow called from OS again after it was detach
         // TODO: Consider testing and removing it when update to androidx.fragment:1.2.0
         if (this._manager && this._manager.isDestroyed()) {
             return;
         }
-        
+
         this._attachedToWindow = true;
         this._processNextNavigationEntry();
     }
@@ -482,8 +482,8 @@ export class Frame extends FrameBase {
     }
 
     public createNativeView() {
-        // Create native view with available _currentEntry occur in Don't Keep Activities 
-        // scenario when Activity is recreated on app suspend/resume. Push frame back in frame stack 
+        // Create native view with available _currentEntry occur in Don't Keep Activities
+        // scenario when Activity is recreated on app suspend/resume. Push frame back in frame stack
         // since it was removed in disposeNativeView() method.
         if (this._currentEntry) {
             this._pushInFrameStack();
@@ -1033,7 +1033,7 @@ class FragmentCallbacksImplementation implements AndroidFragmentCallbacks {
 
     private loadBitmapFromView(view: android.view.View): android.graphics.Bitmap {
         // Don't try to creat bitmaps with no dimensions as this causes a crash
-        // This might happen when showing and closing dialogs fast.  
+        // This might happen when showing and closing dialogs fast.
         if (!(view && view.getWidth() > 0 && view.getHeight() > 0)) {
             return undefined;
         }

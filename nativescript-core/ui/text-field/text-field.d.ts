@@ -33,7 +33,7 @@ export class TextField extends EditableTextBase {
      */
     closeOnReturn: boolean;
 
-    /** 
+    /**
      * iOS only (to avoid 12+ auto suggested strong password handling)
      */
     secureWithoutAutofill: boolean;

@@ -723,7 +723,7 @@ function calculateTransform(view: View): CATransform3D {
     expectedTransform = CATransform3DTranslate(expectedTransform, view.translateX, view.translateY, 0);
     expectedTransform = iosNativeHelper.applyRotateTransform(expectedTransform, view.rotateX, view.rotateY, view.rotate);
     expectedTransform = CATransform3DScale(expectedTransform, scaleX, scaleY, 1);
-    
+
     return expectedTransform;
 }
 

@@ -4,7 +4,7 @@ CSS parser / stringifier.
 
 ## Installation
 
-   ``` Node
+   ``` Shell
    npm install css
    ```
 

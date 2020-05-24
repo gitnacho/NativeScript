@@ -60,7 +60,7 @@ public class CustomTransition extends Visibility {
     private Animator setAnimatorsTarget(AnimatorSet animatorSet, final View view) {
         ArrayList<Animator> animatorsList = animatorSet.getChildAnimations();
         boolean resetOnTransitionEnd = this.resetOnTransitionEnd;
-        
+
         for (int i = 0; i < animatorsList.size(); i++) {
             animatorsList.get(i).setTarget(view);
         }

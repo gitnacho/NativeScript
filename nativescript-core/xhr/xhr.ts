@@ -581,9 +581,9 @@ export class FileReader {
         if (!(blob instanceof Blob)) {
             throw new TypeError(`Failed to execute '${kind}' on 'FileReader': parameter 1 is not of type 'Blob'.`);
         }
-    
+
         this._result = "";
-    
+
         setTimeout(() => {
             this._readyState = this.LOADING;
             this.emitEvent("load");
@@ -622,18 +622,18 @@ export class FileReader {
         this._read(blob, "readAsDataURL");
         this._result = `data:${blob.type};base64,${this._array2base64(Blob.InternalAccessor.getBuffer(blob))}`;
     }
-    
+
     public readAsText(blob: Blob) {
         this._read(blob, "readAsText");
         const textDecoder = new TextDecoder();
         this._result = textDecoder.decode(Blob.InternalAccessor.getBuffer(blob));
     }
-    
+
     public readAsArrayBuffer(blob: Blob) {
         this._read(blob, "readAsArrayBuffer");
         this._result = Blob.InternalAccessor.getBuffer(blob).buffer.slice(0);
     }
-    
+
     public abort() {
         //
     }

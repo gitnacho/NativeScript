@@ -25,7 +25,7 @@ export class FadeTransition extends Transition {
 
         animator.setInterpolator(this.getCurve());
         animatorSet.play(animator);
-    
+
         return animatorSet;
     }
 }

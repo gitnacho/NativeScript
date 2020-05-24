@@ -7,7 +7,7 @@ import * as webViewModule from "@nativescript/core/ui/web-view";
 
 // >> declare-webview-xml
 //  <Page>
-//       {%raw%}<WebView src="{{ someUrl | pathToLocalFile | htmlString }}" />{%endraw%}
+//       {% raw %}<WebView src="{{ someUrl | pathToLocalFile | htmlString }}" />{% endraw %}
 //  </Page>
 // << declare-webview-xml
 

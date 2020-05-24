@@ -4,19 +4,19 @@
    + install appium and all requirments related to `nativescript-dev-appium` plugin usage
    + download images:
 
-     ``` Node
+     ``` Shell
      npm run load-images Emulator-Api23-Default "iPhone X 12"
      ```
 
      or load multiple folders:
 
-     ``` Node
+     ``` Shell
       npm run load-images Emulator-Api23-Default Emulator-Google-Api28 "iPhone X 12"
      ```
 
      or load all folders:
 
-     ``` Node
+     ``` Shell
       npm run load-images all
      ```
 

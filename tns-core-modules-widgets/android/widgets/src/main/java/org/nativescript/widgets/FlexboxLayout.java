@@ -20,8 +20,8 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
-import androidx.annotation.IntDef; 
-import androidx.annotation.NonNull; 
+import androidx.annotation.IntDef;
+import androidx.annotation.NonNull;
 import androidx.core.view.ViewCompat;
 import android.util.AttributeSet;
 import android.util.SparseIntArray;
@@ -520,7 +520,7 @@ public class FlexboxLayout extends ViewGroup {
     }
 
     /**
-    * Invalidates the cache of the orders so that they are recalculated. 
+    * Invalidates the cache of the orders so that they are recalculated.
     */
     public void invalidateOrdersCache() {
         if (this.mOrderCache != null) {

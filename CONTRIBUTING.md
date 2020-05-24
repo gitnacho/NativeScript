@@ -271,7 +271,7 @@ In this case the commits should be merge firstly from release in master branch a
 
 1. Execute `npm i` to install dependencies:
 
-   ``` Node
+   ``` Shell
    npm i
    ```
 

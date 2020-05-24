@@ -7,9 +7,9 @@ import { PropertyChangeData } from "../../data/observable/observable-interfaces"
 
 // Requires.
 import { FormattedString, Span } from "./formatted-string";
-import { 
-    View, Property, CssProperty, InheritedCssProperty, Style, isAndroid, isIOS, Observable, 
-    makeValidator, makeParser 
+import {
+    View, Property, CssProperty, InheritedCssProperty, Style, isAndroid, isIOS, Observable,
+    makeValidator, makeParser
 } from "../core/view";
 
 export { FormattedString, Span };

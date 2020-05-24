@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package org.nativescript.widgets;
 
@@ -32,11 +32,11 @@ public class ContentLayout extends LayoutBase {
         	CommonLayoutParams.measureChild(child, widthMeasureSpec, heightMeasureSpec);
             final int childMeasuredWidth = CommonLayoutParams.getDesiredWidth(child);
             final int childMeasuredHeight = CommonLayoutParams.getDesiredHeight(child);
-            
+
             measureWidth = Math.max(measureWidth, childMeasuredWidth);
             measureHeight = Math.max(measureHeight, childMeasuredHeight);
         }
-        
+
         // Add in our padding
         measureWidth += this.getPaddingLeft() + this.getPaddingRight();
         measureHeight += this.getPaddingTop() + this.getPaddingBottom();
@@ -57,10 +57,10 @@ public class ContentLayout extends LayoutBase {
 		int paddingRight = this.getPaddingRight();
 		int paddingTop = this.getPaddingTop();
 		int paddingBottom = this.getPaddingBottom();
-		
+
 		int childLeft = paddingLeft;
 		int childTop = paddingTop;
-		
+
 		int childRight = right - left - (paddingLeft + paddingRight);
 		int childBottom = bottom - top - (paddingRight + paddingBottom);
 
@@ -69,7 +69,7 @@ public class ContentLayout extends LayoutBase {
 		    if (child.getVisibility() == View.GONE) {
 		        continue;
 		    }
-		
+
 		    CommonLayoutParams.layoutChild(child, childLeft, childTop, childRight, childBottom);
 		}
 

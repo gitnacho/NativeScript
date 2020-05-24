@@ -19,7 +19,7 @@
                     <Button text="Do 10 go backs" tap="tenGoBacks" />
                     <Button text="Navigate To Page with Frame" tap="navigateToPageWithFrame" />
                 </StackLayout>
-            </ScrollView>            
+            </ScrollView>
         </TabViewItem>
         <TabViewItem title="Item 3">
             <ScrollView>
@@ -28,6 +28,6 @@
                     <Button text="Show Modal Frame" tap="onModalFrame" />
                 </StackLayout>
             </ScrollView>
-        </TabViewItem> 
+        </TabViewItem>
     </TabView>
 </Page>

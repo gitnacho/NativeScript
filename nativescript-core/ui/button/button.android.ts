@@ -120,7 +120,7 @@ export class Button extends ButtonBase {
 
     [minHeightProperty.getDefault](): Length {
         const dips = org.nativescript.widgets.ViewHelper.getMinHeight(this.nativeViewProtected);
-        
+
         return { value: dips, unit: "px" };
     }
 

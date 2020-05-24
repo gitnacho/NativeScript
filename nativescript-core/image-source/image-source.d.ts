@@ -278,7 +278,7 @@ export function fromUrl(url: string): Promise<ImageSource>;
 export function fromFileOrResource(path: string): ImageSource;
 
 /**
- * @deprecated Please use utils.isFileOrResourcePath instead. 
+ * @deprecated Please use utils.isFileOrResourcePath instead.
  * Returns true if the specified path points to a resource or local file.
  * @param path The path.
  */

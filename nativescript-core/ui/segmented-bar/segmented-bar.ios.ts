@@ -80,7 +80,7 @@ export class SegmentedBar extends SegmentedBarBase {
         } else {
             this.ios.selectedSegmentTintColor = color;
         }
-        
+
     }
 
     [colorProperty.getDefault](): UIColor {

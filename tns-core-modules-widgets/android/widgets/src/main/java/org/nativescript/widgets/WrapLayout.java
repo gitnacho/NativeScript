@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package org.nativescript.widgets;
 
@@ -17,10 +17,10 @@ public class WrapLayout extends LayoutBase {
 	private int _itemHeight = -1;
 	private Orientation _orientation = Orientation.horizontal;
     private ArrayList<Integer> _lengths = new ArrayList<Integer>();
-    
+
 	public WrapLayout(Context context) {
 		super(context);
-	}	
+	}
 
 	public Orientation getOrientation() {
 	    return this._orientation;
@@ -29,7 +29,7 @@ public class WrapLayout extends LayoutBase {
 	    this._orientation = value;
 	    this.requestLayout();
 	}
-	
+
 	public int getItemWidth() {
 	    return this._itemWidth;
 	}
@@ -37,7 +37,7 @@ public class WrapLayout extends LayoutBase {
 	    this._itemWidth = value;
 	    this.requestLayout();
 	}
-	
+
 	public int getItemHeight() {
 	    return this._itemHeight;
 	}
@@ -45,7 +45,7 @@ public class WrapLayout extends LayoutBase {
 	    this._itemHeight = value;
 	    this.requestLayout();
 	}
-	
+
     private static int getViewMeasureSpec(int parentMode, int parentLength, int itemLength) {
         if (itemLength > 0) {
             return MeasureSpec.makeMeasureSpec(itemLength, MeasureSpec.EXACTLY);
@@ -102,7 +102,7 @@ public class WrapLayout extends LayoutBase {
         this._lengths.clear();
         int rowOrColumn = 0;
         int maxLength = 0;
-        
+
         for (int i = 0, count = this.getChildCount(); i < count; i++) {
             View child = this.getChildAt(i);
             if (child.getVisibility() == View.GONE) {
@@ -113,7 +113,7 @@ public class WrapLayout extends LayoutBase {
             final int childMeasuredWidth = this.getDesiredWidth(child);
             final int childMeasuredHeight = this.getDesiredHeight(child);
             final boolean isFirst = this._lengths.size() <= rowOrColumn;
-            
+
             if (isVertical) {
                 if (childMeasuredHeight > remainingHeight) {
                     rowOrColumn++;
@@ -140,7 +140,7 @@ public class WrapLayout extends LayoutBase {
                     measureWidth += childMeasuredWidth;
                 }
             }
-            
+
             if(isFirst) {
             	this._lengths.add(rowOrColumn, isVertical ? childMeasuredWidth : childMeasuredHeight);
             }
@@ -161,7 +161,7 @@ public class WrapLayout extends LayoutBase {
                 measureHeight += this._lengths.get(i);
             }
         }
-        
+
         // Add in our padding
         measureWidth += horizontalPadding;
         measureHeight += verticalPadding;

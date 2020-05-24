@@ -134,7 +134,7 @@ describe("frame-root-with-single-frame", async function () {
         });
     }
 
-    describe("frame to nested frame with non-default transition", async function () { 
+    describe("frame to nested frame with non-default transition", async function () {
         const playerOne = playersData["playerOneSlide"];
 
         before(async function () {

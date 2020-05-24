@@ -432,7 +432,7 @@ export abstract class ViewBase extends Observable {
      * @private
      */
     public recycleNativeView: "always" | "never" | "auto";
-    
+
     /**
      * @private
      */

@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package org.nativescript.widgets;
 
@@ -30,15 +30,15 @@ public class AbsoluteLayout extends LayoutBase {
 			    continue;
 			}
 
-			CommonLayoutParams.measureChild(child, childMeasureSpec, childMeasureSpec);		   	
+			CommonLayoutParams.measureChild(child, childMeasureSpec, childMeasureSpec);
 		    final int childMeasuredWidth = CommonLayoutParams.getDesiredWidth(child);
 		    final int childMeasuredHeight = CommonLayoutParams.getDesiredHeight(child);
-		    
+
 		    CommonLayoutParams childLayoutParams = (CommonLayoutParams)child.getLayoutParams();
 		    measureWidth = Math.max(measureWidth, childLayoutParams.left  + childMeasuredWidth);
 		    measureHeight = Math.max(measureHeight, childLayoutParams.top + childMeasuredHeight);
 		}
-        
+
         // Add in our padding
         measureWidth += this.getPaddingLeft() + this.getPaddingRight();
         measureHeight += this.getPaddingTop() + this.getPaddingBottom();
@@ -63,16 +63,16 @@ public class AbsoluteLayout extends LayoutBase {
 			if (child.getVisibility() == View.GONE) {
 			    continue;
 			}
-		    
-		    CommonLayoutParams childLayoutParams = (CommonLayoutParams)child.getLayoutParams();		
+
+		    CommonLayoutParams childLayoutParams = (CommonLayoutParams)child.getLayoutParams();
 		    int childWidth = child.getMeasuredWidth();
 		    int childHeight = child.getMeasuredHeight();
-		
+
 		    int childLeft = leftPadding + childLayoutParams.left;
 		    int childTop = topPadding + childLayoutParams.top;
 		    int childRight = childLeft + childWidth + childLayoutParams.leftMargin + childLayoutParams.rightMargin;
 		    int childBottom = childTop + childHeight + childLayoutParams.topMargin + childLayoutParams.bottomMargin;
-		
+
 		    CommonLayoutParams.layoutChild(child, childLeft, childTop, childRight, childBottom);
 		}
 

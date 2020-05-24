@@ -134,7 +134,7 @@ export function createPage() {
 
     const page = new Page();
     page.content = stack;
-    
+
     return page;
 }
 

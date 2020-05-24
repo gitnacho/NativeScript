@@ -48,13 +48,13 @@ You could link the `tns-core-modules-widgets` plugin package to your application
 
 In the `./dist/package` folder execute:
 
-``` Node
+``` Shell
 npm link
 ```
 
 In your application project folder execute:
 
-``` Node
+``` Shell
 npm link tns-core-modules-widgets
 ```
 

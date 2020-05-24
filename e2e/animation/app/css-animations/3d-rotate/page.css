@@ -13,7 +13,7 @@
 .original {
     transform: none;
 }
- 
+
 .animate-x {
     animation-name: rotateX;
     animation-duration: 2s;

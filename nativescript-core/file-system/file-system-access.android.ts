@@ -219,7 +219,7 @@ export class FileSystemAccess {
     }
 
     public read = this.readSync.bind(this);
-    
+
     public readAsync(path: string): Promise<number[]> {
         return new Promise<number[]>((resolve, reject) => {
             try {

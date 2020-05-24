@@ -478,13 +478,13 @@ function setupSetters(): void {
     cssSetters.set("selectedTabTextColor", "red");
     cssSetters.set("androidSelectedTabHighlightColor", "red");
 
-    // ListView-specific props 
+    // ListView-specific props
     cssSetters.set("separatorColor", "red");
 
     // SegmentedBar-specific props
     cssSetters.set("selectedBackgroundColor", "red");
 
-    // Page-specific props 
+    // Page-specific props
     cssSetters.set("statusBarStyle", "light");
     cssSetters.set("androidStatusBarBackground", "red");
 

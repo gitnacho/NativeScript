@@ -71,7 +71,7 @@ class UITextFieldDelegateImpl extends NSObject implements UITextFieldDelegate {
         if (owner) {
             return owner.textFieldShouldChangeCharactersInRangeReplacementString(textField, range, replacementString);
         }
-        
+
         return true;
     }
 }
@@ -150,7 +150,7 @@ export class TextField extends TextFieldBase {
 
     public textFieldShouldBeginEditing(textField: UITextField): boolean {
         this.firstEdit = true;
-        
+
         return this.editable;
     }
 

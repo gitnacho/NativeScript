@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package org.nativescript.widgets;
 
@@ -11,7 +11,7 @@ import android.view.View;
  *
  */
 public class DockLayout extends LayoutBase {
-    
+
     private boolean _stretchLastChild = true;
 
 	public DockLayout(Context context) {
@@ -25,7 +25,7 @@ public class DockLayout extends LayoutBase {
         this._stretchLastChild = value;
         this.requestLayout();
     }
-	
+
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         CommonLayoutParams.adjustChildrenLayoutParams(this, widthMeasureSpec, heightMeasureSpec);
 
@@ -40,7 +40,7 @@ public class DockLayout extends LayoutBase {
 
         int verticalPadding = this.getPaddingTop() + this.getPaddingBottom();
         int horizontalPadding = this.getPaddingLeft() + this.getPaddingRight();
-        
+
         int remainingWidth = widthMode == MeasureSpec.UNSPECIFIED ? 0 : width - horizontalPadding;
         int remainingHeight = heightMode == MeasureSpec.UNSPECIFIED ? 0 : height - verticalPadding;
 
@@ -68,7 +68,7 @@ public class DockLayout extends LayoutBase {
             CommonLayoutParams.measureChild(child, childWidthMeasureSpec, childHeightMeasureSpec);
             final int childMeasuredWidth = CommonLayoutParams.getDesiredWidth(child);
             final int childMeasuredHeight = CommonLayoutParams.getDesiredHeight(child);
-            
+
             CommonLayoutParams childLayoutParams = (CommonLayoutParams)child.getLayoutParams();
             Dock dock = childLayoutParams.dock;
             switch (dock) {
@@ -98,7 +98,7 @@ public class DockLayout extends LayoutBase {
         // Check against our minimum sizes
         measureWidth = Math.max(measureWidth, this.getSuggestedMinimumWidth());
         measureHeight = Math.max(measureHeight, this.getSuggestedMinimumHeight());
-        
+
         int widthSizeAndState = resolveSizeAndState(measureWidth, widthMeasureSpec, 0);
         int heightSizeAndState = resolveSizeAndState(measureHeight, heightMeasureSpec, 0);
 
@@ -165,7 +165,7 @@ public class DockLayout extends LayoutBase {
                     remainingWidth = Math.max(0, remainingWidth - childWidth);
                     break;
             }
-            
+
             CommonLayoutParams.layoutChild(child, childLeft, childTop, childLeft + childWidth, childTop + childHeight);
         }
 

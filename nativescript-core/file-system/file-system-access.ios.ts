@@ -359,7 +359,7 @@ export class FileSystemAccess {
     }
 
     public write = this.writeSync.bind(this);
-    
+
     public writeAsync(path: string, content: NSData): Promise<void> {
         return new Promise<void>((resolve, reject) => {
             try {

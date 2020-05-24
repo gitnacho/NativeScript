@@ -34,7 +34,7 @@ function loadActionIconDrawableOrResourceId(item: ActionItemDefinition): any {
         const is = ImageSource.fromFontIconCodeSync(fontIconCode, font, color);
 
         if (is && is.android) {
-            drawableOrId = new android.graphics.drawable.BitmapDrawable(appResources, is.android); 
+            drawableOrId = new android.graphics.drawable.BitmapDrawable(appResources, is.android);
         }
     } else {
         drawableOrId = getDrawableOrResourceId(itemIcon, appResources);

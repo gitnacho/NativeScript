@@ -75,7 +75,7 @@ export module KeyboardType {
     export const email: BaseKeyboardType
 
     /**
-     * Android: [TYPE_CLASS_NUMBER](http://developer.android.com/reference/android/text/InputType.html#TYPE_CLASS_NUMBER | [TYPE_NUMBER_VARIATION_PASSWORD](android type_text_variation_password)) 
+     * Android: [TYPE_CLASS_NUMBER](http://developer.android.com/reference/android/text/InputType.html#TYPE_CLASS_NUMBER | [TYPE_NUMBER_VARIATION_PASSWORD](android type_text_variation_password))
      * iOS:  [UIKeyboardTypeNumberPad](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITextInputTraits_Protocol/index.html#//apple_ref/c/tdef/UIKeyboardType)
      */
     export const integer: BaseKeyboardType

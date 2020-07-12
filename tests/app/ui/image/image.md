@@ -50,7 +50,7 @@ export function pageLoaded(args: EventData) {
 ``` XML
 <Page>
   <StackLayout>
-     {% raw %}<Image src="res://logo" stretch ="none" / >{% endraw %}
+     {% raw %}<Image src="res://logo" stretch ="none" />{% endraw %}
   </StackLayout>
 </Page>
 ```
@@ -78,7 +78,7 @@ The sample above, demonstrates, how to load an image source while providing URL 
 ``` XML
 <Page>
   <StackLayout>
-     {% raw %}<Image src="~/assets/logo.png" stretch ="none" / >{% endraw %}
+     {% raw %}<Image src="~/assets/logo.png" stretch ="none" />{% endraw %}
   </StackLayout>
 </Page>
 ```

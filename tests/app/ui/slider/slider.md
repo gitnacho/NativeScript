@@ -16,9 +16,9 @@ Using a slider requires the Slider module.
 
 ``` XML
 <Page loaded="pageLoaded">
- <StackLayout orientation="vertical">
-   {% raw %}<Progress value="{{ someProperty }}" />
-   <Slider value="{{ someProperty }}" />{% endraw %}
+ <StackLayout orientation="vertical">{% raw %}
+   <Progress value="{{ someProperty }}" />
+     <Slider value="{{ someProperty }}" />{% endraw %}
  </StackLayout>
 </Page>
 ```

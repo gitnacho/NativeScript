@@ -12,11 +12,11 @@ Here are some guides on how to do that:
 * [Commit Message Guidelines](#commit-messages)
 * [Releasing new versions](#release)
 
-## <a name="coc"></a> Code of Conduct
+## Code of Conduct
 
 Help us keep a healthy and open community. We expect all participants in this project to adhere to the [NativeScript Code Of Conduct](https://github.com/NativeScript/codeofconduct).
 
-## <a name="bugs"></a> Reporting Bugs
+## Reporting Bugs
 
 1. Always update to the most recent master release; the bug may already be resolved.
 1. Search for similar issues in the issues list for this repo; it may already be an identified problem.
@@ -27,13 +27,13 @@ Help us keep a healthy and open community. We expect all participants in this pr
 > * issues that are not constructive or describe problems that cannot be reproduced will be closed
 > * feature requests or bug reports with unanswered questions regarding the behavior/reproduction for more than 20 days will be closed
 
-## <a name="features"></a> Requesting Features
+## Requesting Features
 
 1. Use Github Issues to submit feature requests.
 1. First, search for a similar request and extend it if applicable. This way it would be easier for the community to track the features.
 1. When requesting a new feature, please provide as much detail as possible about why you need the feature in your apps. We prefer that you explain a need rather than explain a technical solution for it. That might trigger a nice conversation on finding the best and broadest technical solution to a specific need.
 
-## <a name="pr"></a> Submitting a PR
+## Submitting a PR
 
 Before you begin:
 
@@ -89,7 +89,7 @@ It's our turn from there on! We will review the PR and discuss changes you might
 
 > **Note**: Sometimes you will see someone from the contributors team writing strange comments like: `test` or `test branch_functional_tests#css-gradients-tests branch_widgets#vultix/css-gradients`* don't worry about it, these are just phrases that trigger the internal CI builds.
 
-## <a name="test-report"></a> Check test report
+## Check test report
 
 The purpose of the test report view is to show the tests' results for the PRs for the external contributors. When a NativeScript team member triggers the tests, you can review the result by selecting the `Details` button next to the `ci/jenkins/core-modules-tests`  task.
 
@@ -107,7 +107,7 @@ For example:
 1. When you select one of them, you will see on the right side all tests, that have been executed. The problematic ones will be coloured in red.
 1. If you click on one of them, detailed info or error log will be displayed. As we've mentioned above in some of the test reports, you will also find screenshots, that demonstrates the problem visually. Those images can be found below the info/ error log.
 
-## <a name="commit-messages"></a> Commit Message Guidelines
+## Commit Message Guidelines
 
 Please follow the git commit message format described below when committing your changes or submitting a PR. That allows us to use the commit messages to generate a change log for every new release.
 
@@ -246,7 +246,7 @@ If you want to contribute, but you are not sure where to start* look for [issues
 
 [commit-message-format]: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#
 
-## <a name="release"></a> Releasing new versions
+## Releasing new versions
 
 Instructions how to release a new version for **NativeScript Core Team Members**.
 

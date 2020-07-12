@@ -20,7 +20,7 @@ Other modules which will be used in the code samples in this article:
 
 ``` XML
 <Page>
-  {%  raw  %}<ListView items="{{ myItems }}" />{%  endraw  %}
+  {% raw %}<ListView items="{{ myItems }}" />{% endraw %}
 </Page>
 ```
 
@@ -28,7 +28,7 @@ Other modules which will be used in the code samples in this article:
 
 ``` XML
 <Page>
-  {%  raw  %}<ListView items="{{ myItems }}" itemTap="listViewItemTap" />{%  endraw  %}
+  {% raw %}<ListView items="{{ myItems }}" itemTap="listViewItemTap" />{% endraw %}
 </Page>
 ```
 
@@ -38,7 +38,7 @@ Other modules which will be used in the code samples in this article:
 
 ``` XML
 <Page>
- {%  raw  %}<ListView items="{{ myItems }}" loadMoreItems="listViewLoadMoreItems" />{%  endraw  %}
+ {% raw %}<ListView items="{{ myItems }}" loadMoreItems="listViewLoadMoreItems" />{% endraw %}
 </Page>
 ```
 
@@ -47,12 +47,12 @@ Other modules which will be used in the code samples in this article:
 ## Define the ListView itemTemplate property.
 
 ``` XML
-<Page>
- {%  raw  %}<ListView items="{{ myItems }}">
+<Page>{% raw %}
+  <ListView items="{{ myItems }}">
     <ListView.itemTemplate>
        <Label text="{{ title || 'Downloading...' }}" textWrap="true" class="title" />
     </ListView.itemTemplate>
- </ListView>{%  endraw  %}
+ </ListView>{% endraw %}
 </Page>
 ```
 
@@ -61,8 +61,8 @@ Other modules which will be used in the code samples in this article:
 The itemTemplateSelector can be an expression specified directly in XML. The context of the expression is the data item for each row.
 
 ``` XML
-<Page>
- {%  raw  %}<ListView items="{{ myItems }}" itemTemplateSelector="age > 18 ? 'green' : 'red'">
+<Page>{% raw %}
+ <ListView items="{{ myItems }}" itemTemplateSelector="age > 18 ? 'green' : 'red'">
     <ListView.itemTemplates>
       <template key="green">
         <Label text="{{ age }}" style.backgroundColor="green" />
@@ -71,7 +71,7 @@ The itemTemplateSelector can be an expression specified directly in XML. The con
         <Label text="{{ age }}" style.backgroundColor="red" />
       </template>
     </ListView.itemTemplates>
- </ListView>{%  endraw  %}
+ </ListView>{% endraw %}
 </Page>
 ```
 
@@ -80,8 +80,8 @@ The itemTemplateSelector can be an expression specified directly in XML. The con
 In case your item template selector involves complicated logic which cannot be expressed with an expression, you can create an item template selector function in the code behind of the page in which the ListView resides. The function receives the respective data item, the row index and the entire ListView items collection as parameters. It has to return the the key of the template to be used based on the supplied information.
 
 ``` XML
-<Page>
- {%  raw  %}<ListView items="{{ myItems }}" itemTemplateSelector="selectItemTemplate">
+<Page>{% raw %}
+ <ListView items="{{ myItems }}" itemTemplateSelector="selectItemTemplate">
     <ListView.itemTemplates>
       <template key="green">
         <Label text="{{ age }}" style.backgroundColor="green" />
@@ -90,7 +90,7 @@ In case your item template selector involves complicated logic which cannot be e
         <Label text="{{ age }}" style.backgroundColor="red" />
       </template>
     </ListView.itemTemplates>
- </ListView>{%  endraw  %}
+ </ListView>{% endraw %}
 </Page>
 ```
 
@@ -101,8 +101,8 @@ In case your item template selector involves complicated logic which cannot be e
 You can use the special value '$index' in the item template selector expression which represents the row index.
 
 ``` XML
-<Page>
- {%  raw  %}<ListView items="{{ myItems }}" itemTemplateSelector="$index % 2 === 0 ? 'even' : 'odd'">
+<Page>{% raw %}
+  <ListView items="{{ myItems }}" itemTemplateSelector="$index % 2 === 0 ? 'even' : 'odd'">
     <ListView.itemTemplates>
       <template key="even">
         <Label text="{{ age }}" style.backgroundColor="white" />
@@ -111,7 +111,7 @@ You can use the special value '$index' in the item template selector expression 
         <Label text="{{ age }}" style.backgroundColor="gray" />
       </template>
     </ListView.itemTemplates>
- </ListView>{%  endraw  %}
+ </ListView>{% endraw %}
 </Page>
 ```
 

@@ -122,9 +122,8 @@ for (var i = 0; i < items.length; i++) {
 
 ## Variable and property names
 
-Variables and properties should use [lower camel case][camelcase]
-capitalization. They should also be descriptive. Single character variables and
-uncommon abbreviations should generally be avoided unless it is something well known as **i** in for loops
+Variables and properties should use [lower camel case][camelcase] capitalization.
+They should also be descriptive. Single character variables and uncommon abbreviations should generally be avoided unless it is something well known as **i** in for loops
 
 *Right*:
 
@@ -179,8 +178,7 @@ var second = 1 * 1000;
 
 ## Object / Array creation
 
-Use trailing commas and put *short* declarations on a single line. Only quote
-keys when your interpreter complains:
+Use trailing commas and put *short* declarations on a single line. Only quote keys when your interpreter complains:
 
 *Right*:
 
@@ -339,16 +337,13 @@ if (0 <= num && num <= 100) {
 
 ## Function length
 
-Keep your functions short. A good function fits on a slide that the people in
-the last row of a big room can comfortably read. So don't count on them having
-perfect vision and limit yourself to 1/2 of your screen height per function (no screen rotation :).
+Keep your functions short. A good function fits on a slide that the people in the last row of a big room can comfortably read. So don't count on them having perfect vision and limit yourself to 1/2 of your screen height per function (no screen rotation :).
 
 ## Return statements
 
 There are a few important considerations here:
 
-* To avoid deep nesting of if-statements, always return a function's value as early
-as possible. In certain routines, once you know the answer, you want to return it to the calling routine immediately. If the routine is defined in such a way that it doesn't require any cleanup, not returning immediately means that you have to write more code.
+* To avoid deep nesting of if-statements, always return a function's value as early as possible. In certain routines, once you know the answer, you want to return it to the calling routine immediately. If the routine is defined in such a way that it doesn't require any cleanup, not returning immediately means that you have to write more code.
 * Minimize the number of returns in each routine. It's harder to understand a routine if, reading it at the bottom, you're unaware of the possibility that it *return*ed somewhere above.
 
 *Right*:
@@ -469,7 +464,7 @@ When you **need** to keep a reference to **this** use **that** as the name of th
 
 ``` TypeScript
 let that = this;
-doSomething(function(){
+doSomething(function() {
     that.doNothing();
 });
 ```
@@ -478,7 +473,7 @@ doSomething(function(){
 
 ``` TypeScript
 let me = this;
-doSomething(function(){
+doSomething(function() {
     me.doNothing();
 });
 ```

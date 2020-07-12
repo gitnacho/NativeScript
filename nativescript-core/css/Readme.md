@@ -25,8 +25,7 @@ Accepts a CSS string and returns an AST `object`.
 `options`:
 
 * silent: silently fail on parse errors.
-* source: the path to the file containing `css`. Makes errors and source
-  maps more helpful, by letting them know where code comes from.
+* source: the path to the file containing `css`. Makes errors and source maps more helpful, by letting them know where code comes from.
 
 ### Example
 
@@ -36,13 +35,9 @@ var ast = css.parse('body { font-size: 12px; }', { source: 'source.css' });
 
 ### Errors
 
-Errors will have `error.position`, just like [`node.position`](#position). The
-error contains the source position in the message. To get the error message
-without the position use `error.reason`.
+Errors will have `error.position`, just like [`node.position`](#position). The error contains the source position in the message. To get the error message without the position use `error.reason`.
 
-If you create any errors in plugins such as in
-[rework](https://github.com/reworkcss/rework), you __must__ set the `position`
-as well for consistency.
+If you create any errors in plugins such as in [rework](https://github.com/reworkcss/rework), you __must__ set the `position` as well for consistency.
 
 ## AST
 
@@ -52,8 +47,7 @@ All nodes have the following properties.
 
 #### position
 
-Information about the position in the source string that corresponds to
-the node.
+Information about the position in the source string that corresponds to the node.
 
 `Object`:
 
@@ -63,16 +57,12 @@ the node.
 * end: `Object`:
   + line: `Number`.
   + column: `Number`.
-* source: `String` or `undefined`. The value of `options.source` if passed to
-  `css.parse`. Otherwise `undefined`.
+* source: `String` or `undefined`. The value of `options.source` if passed to `css.parse`. Otherwise `undefined`.
 * content: `String`. The full source string passed to `css.parse`.
 
-The line and column numbers are 1-based: The first line is 1 and the first
-column of a line is 1 (not 0).
+The line and column numbers are 1-based: The first line is 1 and the first column of a line is 1 (not 0).
 
-The `position` property lets you know from which source file the node comes
-from (if available), what that file contains, and what part of that file was
-parsed into the node.
+The `position` property lets you know from which source file the node comes from (if available), what that file contains, and what part of that file was parsed into the node.
 
 #### type
 
@@ -84,8 +74,7 @@ A reference to the parent node, or `null` if the node has no parent.
 
 ### Types
 
-The available values of `node.type` are listed below, as well as the available
-properties of each node (other than the common properties listed above.)
+The available values of `node.type` are listed below, as well as the available properties of each node (other than the common properties listed above.)
 
 #### stylesheet
 
@@ -101,18 +90,14 @@ The root node returned by `css.parse`.
 
 #### declaration
 
-* property: `String`. The property name, trimmed from whitespace and
-  comments. May not be empty.
-* value: `String`. The value of the property, trimmed from whitespace and
-  comments. Empty values are allowed.
+* property: `String`. The property name, trimmed from whitespace and comments. May not be empty.
+* value: `String`. The value of the property, trimmed from whitespace and comments. Empty values are allowed.
 
 #### comment
 
-A rule-level or declaration-level comment. Comments inside selectors,
-properties and values etc. are lost.
+A rule-level or declaration-level comment. Comments inside selectors, properties and values etc. are lost.
 
-* comment: `String`. The part between the starting `/*` and the ending `*/`
-  of the comment, including whitespace.
+* comment: `String`. The part between the starting `/*` and the ending `*/` of the comment, including whitespace.
 
 #### charset
 
@@ -132,10 +117,8 @@ The `@custom-media` at-rule.
 The `@document` at-rule.
 
 * document: `String`. The part following `@document`.
-* vendor: `String` or `undefined`. The vendor prefix in `@document`, or
-  `undefined` if there is none.
-* rules: `Array` of nodes with the types `rule`, `comment` and any of the
-  at-rule types.
+* vendor: `String` or `undefined`. The vendor prefix in `@document`, or `undefined` if there is none.
+* rules: `Array` of nodes with the types `rule`, `comment` and any of the at-rule types.
 
 #### font-face
 
@@ -147,8 +130,7 @@ The `@font-face` at-rule.
 
 The `@host` at-rule.
 
-* rules: `Array` of nodes with the types `rule`, `comment` and any of the
-  at-rule types.
+* rules: `Array` of nodes with the types `rule`, `comment` and any of the at-rule types.
 
 #### import
 
@@ -174,8 +156,7 @@ The `@keyframes` at-rule.
 The `@media` at-rule.
 
 * media: `String`. The part following `@media`.
-* rules: `Array` of nodes with the types `rule`, `comment` and any of the
-  at-rule types.
+* rules: `Array` of nodes with the types `rule`, `comment` and any of the at-rule types.
 
 #### namespace
 

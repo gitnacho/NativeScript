@@ -6,6 +6,7 @@
 1. When there is a ***.android.ts** named file this tells our CLI that this file is Android-specific and should be included in Android builds ONLY. When a build is started for the Android platform, the **.android** part of the file is stripped in the application package. For example **foo.android.js** will become ***foo.js**. Same convention works for ***.ios.ts** files.
 
 ## Declaration and implementation files
+
 There are several major scenarios when writing modules:
 
 ### The module implementation contains pure JavaScript code ONLY and does not depend on native APIs. In this case the entire logic is executed on the JS Virtual Machine side and the TNS Runtime is not involved.
@@ -40,7 +41,6 @@ export class Foo implements FooDefinition {
 ### The module implementation depends on native APIs ONLY and the common pure JavaScript code between platform-specific implementations is minimal.
 
 _Example:_ [timer module](tns-core-modules/timer)
-
 
 **Declaration file (foo.d.ts):**
 
@@ -196,10 +196,10 @@ export function stopNative();
 **Android Native Implementation  file (foo-native.android.ts):**
 
 ``` TypeScript
-export function startNative(){
+export function startNative() {
     // call native code here
 }
-export function stopNative(){
+export function stopNative() {
     // call native code here
 }
 ```
@@ -207,10 +207,10 @@ export function stopNative(){
 **iOS Native Implementation  file (foo-native.ios.ts):**
 
 ``` TypeScript
-export function startNative(){
+export function startNative() {
     // call native code here
 }
-export function stopNative(){
+export function stopNative() {
     // call native code here
 }
 ```

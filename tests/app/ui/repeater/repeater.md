@@ -27,8 +27,8 @@ Other modules which will be used in the code samples in this article:
 ## Define the Repeater itemTemplate property.
 
 ``` XML
-<Page>
- {% raw %}<Repeater items="{{ myItems }}">
+<Page>{% raw %}
+  <Repeater items="{{ myItems }}">
     <Repeater.itemTemplate>
        <Label text="{{ title || 'Downloading...' }}" textWrap="true" class="title" />
     </Repeater.itemTemplate>
@@ -39,8 +39,8 @@ Other modules which will be used in the code samples in this article:
 ## Define the Repeater itemsLayout property. Default is StackLayout with orientation="vertical".
 
 ``` XML
-<Page>
- {% raw %}<Repeater items="{{ myItems }}">
+<Page>{% raw %}
+  <Repeater items="{{ myItems }}">
     <Repeater.itemsLayout>
        <StackLayout orientation="horizontal" />
     </Repeater.itemsLayout>
@@ -51,17 +51,17 @@ Other modules which will be used in the code samples in this article:
 ## Repeater with WrapLayout inside ScrollView.
 
 ``` XML
-<Page>
-{% raw %}<ScrollView>
-  <Repeater items="{{ myItems }}">
-    <Repeater.itemsLayout>
-       <WrapLayout />
-    </Repeater.itemsLayout>
-    <Repeater.itemTemplate>
-       <Label text="{{ $value }}" margin="10" />
-    </Repeater.itemTemplate>
-  </Repeater>
- </ScrollView>{% endraw %}
+<Page>{% raw %}
+  <ScrollView>
+    <Repeater items="{{ myItems }}">
+      <Repeater.itemsLayout>
+         <WrapLayout />
+      </Repeater.itemsLayout>
+      <Repeater.itemTemplate>
+        <Label text="{{ $value }}" margin="10" />
+      </Repeater.itemTemplate>
+    </Repeater>
+  </ScrollView>{% endraw %}
 </Page>
 ```
 

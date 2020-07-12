@@ -1,10 +1,4 @@
-<a id="markdown-markdown-header-development-workflow" name="markdown-header-development-workflow"></a>
-
 # Development Workflow
-
-<!-- TOC depthfrom:2 -->
-
-<!-- /TOC -->
 
 ## Prerequisites
 

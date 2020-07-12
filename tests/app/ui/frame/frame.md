@@ -50,7 +50,7 @@ Using the `BackstackEntry` allows us to navigate back to a specific page.
 ``` TypeScript
 import {BackstackEntry, Frame} from "ui/frame"
 
-export function backNavigation(args){
+export function backNavigation(args) {
     const backstackEntryFirstPage = args.object.page.frame.backStack[0];
     const frame = args.object.page.frame;
     frame.goBack(backstackEntryFirstPage);

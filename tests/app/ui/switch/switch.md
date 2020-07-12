@@ -16,8 +16,8 @@ Using a switch requires the Switch module.
 
 ``` XML
 <Page loaded="pageLoaded">
- <StackLayout orientation="vertical">
-   {% raw %}<Switch checked="{{ someProperty }}" />
+ <StackLayout orientation="vertical">{% raw %}
+   <Switch checked="{{ someProperty }}" />
    <Button isEnabled="{{ someProperty }}" text="This is a Button!" />{% endraw %}
  </StackLayout>
 </Page>

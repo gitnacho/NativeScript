@@ -16,8 +16,8 @@ Using a TextView requires the text-view module.
 
 ``` XML
 <Page loaded="pageLoaded">
-    <StackLayout orientation="vertical">
-        {% raw %}<TextView text="{{ someProperty }}" />
+    <StackLayout orientation="vertical">{% raw %}
+        <TextView text="{{ someProperty }}" />
         <TextView text="{{ someProperty }}" />{% endraw %}
     </StackLayout>
 </Page>
